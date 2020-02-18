@@ -18,7 +18,7 @@ const intialState = {
     isAuthenticated: null,
     isLoading: false,
     user: null,
-    msg: {}
+    showSuccess: false
 }
 
 export default function(state = intialState, action) {
@@ -46,7 +46,14 @@ export default function(state = intialState, action) {
             };
             case REGISTER_SUCCESS:
                 return {
-                    msg: action.payload.msg
+                    msg: action.payload.msg,
+                    ...state,
+                
+                isAuthenticated: false,
+                isLoading: false,
+                user: null,
+                token:null,
+                showSuccess:true
                    
                 }
         case AUTH_ERROR:
@@ -59,7 +66,8 @@ export default function(state = intialState, action) {
                 token: null,
                 user: null,
                 isAuthenticated: false,
-                isLoading: false
+                isLoading: false,
+                showSuccess:false
             }
         default:
             return state;

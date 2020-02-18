@@ -28,7 +28,8 @@ class Contactlist extends Component
         lastname: null,
         phonenumber: null,
         email: null,
-        dob: null
+        dob: null,
+        temp: "999"
     }
 
 
@@ -112,10 +113,11 @@ class Contactlist extends Component
     onGetitem = () => {
         this.props.getItems();
     }
-
-    onClicklose = () => {
-        window.location.reload(false)
+    onSearch = () => {
+        this.props.searchItem(this.state.temp);
     }
+
+  
 
 
    render() {
@@ -154,7 +156,7 @@ class Contactlist extends Component
                         <li>
                             <span class="fab-label">Hide Contacts</span>
                             <div class="fab-icon-holder">
-                                <button onClick={this.onClicklose.bind(this)} class="buttonChange" type="button" data-toggle="modal" data-target=".upload-modal">
+                                <button onClick={this.onSearch.bind(this)} class="buttonChange" type="button" data-toggle="modal" data-target=".upload-modal">
                                     <i class="fas fa-upload fa-lg"></i>
                                 </button>
                                 
