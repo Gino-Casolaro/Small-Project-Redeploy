@@ -125,8 +125,8 @@
 }
 
 .buttonChange {
- background-color:rgb(119, 170, 241); /* Blue background */
- color: white; /* White text */
+ background-color:rgb(58, 59, 59); /* Blue background */
+ color: rgb(58, 59, 59); /* White text */
  cursor: pointer; /* Mouse pointer on hover */
  display: flex;
  align-items: center;

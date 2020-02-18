@@ -146,18 +146,18 @@ class Contactlist extends Component
 
                     <ul class="fab-options">
                         <li>
-                            <span class="fab-label">Show Contacts</span>
-                            <div class="fab-icon-holder">
+                            <span className="fab-label">Show Contacts</span>
+                            <div className="fab-icon-holder">
                                 <button onClick={this.onGetitem.bind(this)} class="buttonChange" type="button" data-toggle="modal" data-target=".create-template-modal">
-                                    <i class="fas fa-file-alt fa-lg"></i>
+                                    <i className="fas fa-file-alt fa-lg"></i>
                                 </button>
                             </div>
                         </li>
                         <li>
-                            <span class="fab-label">Hide Contacts</span>
-                            <div class="fab-icon-holder">
+                            <span className="fab-label">Hide Contacts</span>
+                            <div className="fab-icon-holder">
                                 <button onClick={this.onSearch.bind(this)} class="buttonChange" type="button" data-toggle="modal" data-target=".upload-modal">
-                                    <i class="fas fa-upload fa-lg"></i>
+                                    <i className="fas fa-upload fa-lg"></i>
                                 </button>
                                 
                             </div>
